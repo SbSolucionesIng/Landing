@@ -29,7 +29,7 @@ export function Home() {
                 color="white"
                 className="mb-6 font-black"
               >
-                Your story starts with ass.
+                Your story starts with us.
               </Typography>
               <Typography variant="lead" color="white" className="opacity-80">
                 We develop custom applications, websites, and web systems tailored to simplify your work and boost your business. 
