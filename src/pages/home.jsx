@@ -51,7 +51,7 @@ export function Home() {
         </video>
         <div className="absolute top-0 h-full w-full bg-black/60 z-10" />
         <div className="max-w-8xl container relative flex flex-col items-center gap-4 z-20">
-          <img src="/img/logo.png" alt="Logo SB" className="w-24" />
+          <img src="/img/logo.png" alt="Logo SB" className="w-32" />
           <div className="flex flex-wrap items-center">
             <div className="ml-auto mr-auto w-full px-4 text-center lg:w-8/12">
               <Typography variant="h1" color="white" className="mb-6 font-black">
