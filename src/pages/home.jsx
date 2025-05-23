@@ -68,7 +68,7 @@ export function Home() {
         </div>
       </div>
 
-      <section className="relative bg-gray-300 py-24 px-4">
+      <section className="relative bg-gray-100 py-24 px-4">
         <div className="container mx-auto">
           <div className="mx-auto w-full px-4 text-center lg:w-6/12">
             <Typography variant="lead" className="font-semibold">Co - Working</Typography>
