@@ -72,10 +72,10 @@ export function Home() {
         <div className="container mx-auto">
           <div className="mx-auto w-full px-4 text-center lg:w-6/12">
             <Typography variant="lead" className="font-semibold">Co - Working</Typography>
-            <Typography variant="h2" color="blue-gray" className="my-3">
+            <Typography variant="h2" color="#ffffff" className="my-3">
               Build something
             </Typography>
-            <Typography variant="lead" className="text-blue-gray-500">
+            <Typography variant="lead" className="text-gray-800">
               From the first idea to the final product,
               we're here to turn your vision into reality with smart, tailored solutions that fit your business.
             </Typography>
@@ -86,9 +86,9 @@ export function Home() {
                 key={title}
                 color="transparent"
                 shadow={false}
-                className="text-center text-blue-gray-900"
+                className="text-center text-gray-800"
               >
-                <div className="mx-auto mb-6 grid h-14 w-14 place-items-center rounded-full bg-blue-gray-900 shadow-lg shadow-gray-500/20">
+                <div className="mx-auto mb-6 grid h-14 w-14 place-items-center rounded-full bg-[#69b42d] shadow-lg shadow-gray-500/20">
                   {React.createElement(icon, {
                     className: "w-5 h-5 text-white",
                   })}
@@ -96,7 +96,7 @@ export function Home() {
                 <Typography variant="h5" color="blue-gray" className="mb-2">
                   {title}
                 </Typography>
-                <Typography className="font-normal text-blue-gray-500">
+                <Typography className="font-normal text-gray-800">
                   {description}
                 </Typography>
               </Card>
@@ -107,7 +107,7 @@ export function Home() {
             <Typography variant="h2" color="blue-gray" className="my-3">
               Want to work with us? <br />Contact the Team Behind the Code
             </Typography>
-            <Typography variant="lead" className="text-blue-gray-500">
+            <Typography variant="lead" className="text-gray-800">
               Complete this form and we will get back to you in 24 hours.
 
             </Typography>
@@ -118,7 +118,7 @@ export function Home() {
               <Input variant="outlined" size="lg" label="Email Address" />
             </div>
             <Textarea variant="outlined" size="lg" label="Message" rows={8} />
-            <Button variant="gradient" size="lg" className="mt-8" fullWidth>
+            <Button className="bg-[#69b42d] text-white mt-8" variant="filled" size="lg" fullWidth>
               Send Message
             </Button>
           </form>
