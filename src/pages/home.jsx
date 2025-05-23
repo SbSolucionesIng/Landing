@@ -88,7 +88,7 @@ export function Home() {
                 shadow={false}
                 className="text-center text-gray-800"
               >
-                <div className="mx-auto mb-6 grid h-14 w-14 place-items-center rounded-full bg-[#097969] shadow-lg shadow-gray-500/20">
+                <div className="mx-auto mb-6 grid h-14 w-14 place-items-center rounded-full bg-[#69b42d] shadow-lg shadow-gray-500/20">
                   {React.createElement(icon, {
                     className: "w-5 h-5 text-white",
                   })}
@@ -118,7 +118,7 @@ export function Home() {
               <Input variant="outlined" size="lg" label="Email Address" />
             </div>
             <Textarea variant="outlined" size="lg" label="Message" rows={8} />
-            <Button className="bg-[#097969] text-white mt-8" variant="filled" size="lg" fullWidth>
+            <Button className="bg-[#69b42d] text-white mt-8" variant="filled" size="lg" fullWidth>
               Send Message
             </Button>
           </form>
