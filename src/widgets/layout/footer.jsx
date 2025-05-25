@@ -17,35 +17,7 @@ export function Footer({ title, description, menus, copyright }) {
               {description}
             </Typography>
           </div>
-          <div className="mx-auto mt-12 grid w-max grid-cols-2 gap-24 lg:mt-0">
-            {menus.map(({ name, items }) => (
-              <div key={name}>
-                <Typography
-                  variant="small"
-                  color="blue-gray"
-                  className="mb-2 block font-medium uppercase"
-                >
-                  {name}
-                </Typography>
-                <ul className="mt-3">
-                  {items.map((item) => (
-                    <li key={item.name}>
-                      <Typography
-                        as="a"
-                        href={item.path}
-                        target="_blank"
-                        rel="noreferrer"
-                        variant="small"
-                        className="mb-2 block font-normal text-blue-gray-500 hover:text-blue-gray-700"
-                      >
-                        {item.name}
-                      </Typography>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            ))}
-          </div>
+         
         </div>
         <hr className="my-6 border-gray-300" />
         <div className="flex flex-wrap items-center justify-center md:justify-between">
@@ -67,25 +39,13 @@ Footer.defaultProps = {
   title: "SB Soluciones Ingeniería",
   description:
     "Software development and tech support solutions to help your business grow.",
-  menus: [
-    {
-      name: "useful links",
-      items: [
-        {
-          name: "Contact Us",
-          path: "https://creative-tim.com/contact-us?ref=mtk",
-        },
-      ],
-    },
-  ],
+  
   copyright: `Copyright © ${year} SB Soluciones Ing.`,
 };
 
 Footer.propTypes = {
   title: PropTypes.string,
-  description: PropTypes.string,
-  socials: PropTypes.arrayOf(PropTypes.object),
-  menus: PropTypes.arrayOf(PropTypes.object),
+  description: PropTypes.string, 
   copyright: PropTypes.node,
 };
 
