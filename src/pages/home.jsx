@@ -124,9 +124,7 @@ export function Home() {
           </form>
         </div>
       </section>
-      <div className="bg-gray-100">
-        <Footer />
-      </div>
+      <Footer />
     </>
   );
 }
