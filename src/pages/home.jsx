@@ -67,7 +67,6 @@ export function Home() {
           </div>
         </div>
       </div>
-
       <section className="relative py-24 px-4">
         <div className="container mx-auto">
           <div className="mx-auto w-full px-4 text-center lg:w-6/12">
