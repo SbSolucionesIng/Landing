@@ -19,19 +19,19 @@ const contactData = [
     title: "Excelent Services",
     icon: BriefcaseIcon,
     description:
-      "Some quick example text to build on the card title and make up the bulk of the card's content.",
+      "We provide top-quality technical support and custom software solutions to help your business grow smoothly.",
   },
   {
     title: "Grow Your Market",
     icon: ChartBarIcon,
     description:
-      "Some quick example text to build on the card title and make up the bulk of the card's content.",
+      "Boost your business with digital solutions that expand your reach and improve efficiency.",
   },
   {
     title: "Launch Time",
     icon: PlayIcon,
     description:
-      "Some quick example text to build on the card title and make up the bulk of the card's content.",
+      "We turn your ideas into reality quickly and efficiently, getting your product to market fast.",
   },
 ];
 
@@ -59,7 +59,7 @@ export function Home() {
               </Typography>
               <Typography variant="lead" color="white" className="opacity-80">
                 We develop custom applications, websites, and web systems tailored to simplify your work and boost your business.
-                We also provide professional repair and optimization services for computers and notebooks.
+                
                 At SB Soluciones Ingeniería, we are committed to offering reliable solutions and personalized support,
                 always with friendly service and attention to your needs.
               </Typography>
@@ -117,7 +117,7 @@ export function Home() {
               <Input variant="outlined" size="lg" label="Full Name" />
               <Input variant="outlined" size="lg" label="Email Address" />
             </div>
-            <Textarea variant="outlined" size="lg" label="Message" rows={8} />
+            <Textarea variant="outlined" size="lg" label="Your Idea" rows={8} />
             <Button className="bg-[#69b42d] text-white mt-8" variant="filled" size="lg" fullWidth>
               Send Message
             </Button>

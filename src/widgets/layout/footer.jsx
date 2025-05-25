@@ -81,7 +81,7 @@ export function Footer({ title, description, socials, menus, copyright }) {
 Footer.defaultProps = {
   title: "SB Soluciones Ingeniería",
   description:
-    "Easy to use React components for Tailwind CSS and Material Design.",
+    "Software development and tech support solutions to help your business grow.",
   socials: [
     {
       color: "gray",
@@ -144,7 +144,7 @@ Footer.defaultProps = {
   ],
   copyright: (
     <>
-      Copyright © {year} Material Tailwind by{" "}
+      Copyright © {year} SB Soluciones Ing.{" "}
       <a
         href="https://www.creative-tim.com?ref=mtk"
         target="_blank"
