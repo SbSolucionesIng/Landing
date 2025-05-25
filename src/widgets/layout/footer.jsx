@@ -108,37 +108,22 @@ Footer.defaultProps = {
     {
       name: "useful links",
       items: [
-        { name: "About Us", path: "https://www.creative-tim.com/presentation" },
-        { name: "Blog", path: "https://www.creative-tim.com/blog" },
-        {
-          name: "Github",
-          path: "https://www.github.com/creativetimofficial/material-tailwind?ref=mtk",
+         {
+          name: "Contact Us",
+          path: "https://creative-tim.com/contact-us?ref=mtk",
         },
-        {
-          name: "Free Products",
-          path: "https://www.creative-tim.com/templates/free?ref=mtk",
-        },
+        
+        
+       
       ],
     },
     {
       name: "other resources",
       items: [
-        {
-          name: "MIT License",
-          path: "https://github.com/creativetimofficial/material-tailwind/blob/main/LICENSE.md?ref=mtk",
-        },
-        {
-          name: "Contribute",
-          path: "https://github.com/creativetimofficial/material-tailwind/blob/main/CONTRIBUTING.md?ref=mtk",
-        },
-        {
-          name: "Change Log",
-          path: "https://github.com/creativetimofficial/material-tailwind/blob/main/CHANGELOG.md?ref=mtk",
-        },
-        {
-          name: "Contact Us",
-          path: "https://creative-tim.com/contact-us?ref=mtk",
-        },
+       
+       
+        
+       
       ],
     },
   ],
