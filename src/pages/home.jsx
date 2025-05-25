@@ -59,7 +59,7 @@ export function Home() {
               </Typography>
               <Typography variant="lead" color="white" className="opacity-80">
                 We develop custom applications, websites, and web systems tailored to simplify your work and boost your business.
-                
+
                 At SB Soluciones Ingeniería, we are committed to offering reliable solutions and personalized support,
                 always with friendly service and attention to your needs.
               </Typography>
@@ -68,7 +68,7 @@ export function Home() {
         </div>
       </div>
 
-      <section className="relative bg-gray-100 py-24 px-4">
+      <section className="relative py-24 px-4">
         <div className="container mx-auto">
           <div className="mx-auto w-full px-4 text-center lg:w-6/12">
             <Typography variant="lead" className="font-semibold">Co - Working</Typography>
@@ -124,7 +124,7 @@ export function Home() {
           </form>
         </div>
       </section>
-      <div className="bg-white">
+      <div className="bg-gray-100">
         <Footer />
       </div>
     </>
