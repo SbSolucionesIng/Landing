@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import {
   Card,
   Typography,
@@ -12,7 +12,6 @@ import {
   PlayIcon,
 } from "@heroicons/react/24/solid";
 import { Footer } from "@/widgets/layout";
-
 
 const contactData = [
   {
@@ -36,6 +35,8 @@ const contactData = [
 ];
 
 export function Home() {
+  const [messageSent, setMessageSent] = useState(false);
+
   return (
     <>
       <div className="relative flex h-screen content-center items-center justify-center pt-16 pb-32 overflow-hidden">
@@ -59,7 +60,6 @@ export function Home() {
               </Typography>
               <Typography variant="lead" color="white" className="opacity-80">
                 We develop custom applications, websites, and web systems tailored to simplify your work and boost your business.
-
                 At SB Soluciones Ingeniería, we are committed to offering reliable solutions and personalized support,
                 always with friendly service and attention to your needs.
               </Typography>
@@ -67,6 +67,7 @@ export function Home() {
           </div>
         </div>
       </div>
+
       <section className="relative py-24 px-4">
         <div className="container mx-auto">
           <div className="mx-auto w-full px-4 text-center lg:w-6/12">
@@ -79,6 +80,7 @@ export function Home() {
               we're here to turn your vision into reality with smart, tailored solutions that fit your business.
             </Typography>
           </div>
+
           <div className="mx-auto mt-20 mb-48 grid max-w-5xl grid-cols-1 gap-16 md:grid-cols-2 lg:grid-cols-3">
             {contactData.map(({ title, icon, description }) => (
               <Card
@@ -101,6 +103,7 @@ export function Home() {
               </Card>
             ))}
           </div>
+
           <div className="mx-auto w-full px-4 text-center lg:w-6/12">
             <Typography variant="lead" className="font-semibold">Contact Us</Typography>
             <Typography variant="h2" color="blue-gray" className="my-3">
@@ -108,18 +111,78 @@ export function Home() {
             </Typography>
             <Typography variant="lead" className="text-gray-800">
               Complete this form and we will get back to you in 24 hours.
-
             </Typography>
           </div>
-          <form className="mx-auto w-full mt-12 lg:w-5/12">
+
+          <form
+            className="mx-auto w-full mt-12 lg:w-5/12"
+            onSubmit={(e) => {
+              e.preventDefault();
+              const form = e.target;
+
+              fetch("https://formsubmit.co/ajax/sb.soluciones.juy@gmail.com", {
+                method: "POST",
+                headers: {
+                  "Content-Type": "application/json",
+                  Accept: "application/json",
+                },
+                body: JSON.stringify({
+                  name: form.name.value,
+                  email: form.email.value,
+                  message: form.message.value,
+                }),
+              })
+                .then((response) => {
+                  if (response.ok) {
+                    setMessageSent(true);
+                    form.reset();
+                  }
+                })
+                .catch((error) => console.error("Error:", error));
+            }}
+          >
             <div className="mb-8 flex gap-8">
-              <Input variant="outlined" size="lg" label="Full Name" />
-              <Input variant="outlined" size="lg" label="Email Address" />
+              <Input
+                variant="outlined"
+                size="lg"
+                label="Full Name"
+                name="name"
+                required
+              />
+              <Input
+                variant="outlined"
+                size="lg"
+                label="Email Address"
+                name="email"
+                type="email"
+                required
+              />
             </div>
-            <Textarea variant="outlined" size="lg" label="Your Idea" rows={8} />
-            <Button className="bg-[#69b42d] text-white mt-8" variant="filled" size="lg" fullWidth>
+
+            <Textarea
+              variant="outlined"
+              size="lg"
+              label="Your Idea"
+              rows={8}
+              name="message"
+              required
+            />
+
+            <Button
+              className="bg-[#69b42d] text-white mt-8"
+              variant="filled"
+              size="lg"
+              fullWidth
+              type="submit"
+            >
               Send Message
             </Button>
+
+            {messageSent && (
+              <p className="text-green-600 font-medium mt-4 text-center">
+                ✅ Your message has been sent successfully!
+              </p>
+            )}
           </form>
         </div>
       </section>
