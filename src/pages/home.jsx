@@ -47,7 +47,7 @@ export function Home() {
           playsInline
           className="absolute top-0 left-0 h-full w-full object-cover z-0"
         >
-          <source src="/img/1.mp4" type="video/mp4" />
+          <source src="/img/2.mp4" type="video/mp4" />
           Tu navegador no soporta el video HTML5.
         </video>
         <div className="absolute top-0 h-full w-full bg-black/60 z-10" />
