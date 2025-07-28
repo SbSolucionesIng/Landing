@@ -8,7 +8,7 @@ export function Footer({ title, description, menus, copyright }) {
     <footer className="relative px-4 pt-8 pb-6 bg-gray-100">
       <div className="container mx-auto">
         <div className="flex flex-wrap pt-6 text-center lg:text-left">
-          <img src="/img/logonuevo7-sinfondo.png" alt="Logo SB" className="w-48" />
+          <img src="/img/logonuevo7-sinfondo.png" alt="Logo SB" className="w-32" />
           <div className="w-full px-4 lg:w-6/12">
             <Typography variant="h4" className="mb-4" color="blue-gray">
               {title}
