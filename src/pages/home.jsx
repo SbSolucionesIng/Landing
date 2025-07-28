@@ -52,7 +52,7 @@ export function Home() {
         </video>
         <div className="absolute top-0 h-full w-full bg-black/60 z-10" />
         <div className="max-w-8xl container relative flex flex-col items-center gap-4 z-20">
-          <img src="/img/logonuevo7-sinfondo.png" alt="Logo SB" className="w-32" />
+          <img src="/img/logonuevo7-sinfondo.png" alt="Logo SB" className="w-56" />
           <div className="flex flex-wrap items-center">
             <div className="ml-auto mr-auto w-full px-4 text-center lg:w-8/12">
               <Typography variant="h1" color="white" className="mb-6 font-black">
@@ -89,7 +89,7 @@ export function Home() {
                 shadow={false}
                 className="text-center text-gray-800"
               >
-                <div className="mx-auto mb-6 grid h-14 w-14 place-items-center rounded-full bg-[#69b42d] shadow-lg shadow-gray-500/20">
+                <div className="mx-auto mb-6 grid h-14 w-14 place-items-center rounded-full bg-[#0047AB] shadow-lg shadow-gray-500/20">
                   {React.createElement(icon, {
                     className: "w-5 h-5 text-white",
                   })}
@@ -169,7 +169,7 @@ export function Home() {
             />
 
             <Button
-              className="bg-[#69b42d] text-white mt-8"
+              className="bg-[#0047AB] text-white mt-8"
               variant="filled"
               size="lg"
               fullWidth
