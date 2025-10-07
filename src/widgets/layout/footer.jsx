@@ -38,7 +38,7 @@ export function Footer({ title, description, menus, copyright }) {
 Footer.defaultProps = {
   title: "SB Soluciones Ingeniería",
   description:
-    "Software development and tech support solutions to help your business grow.",
+    "Desarrollo de software y soluciones de soporte técnico para hacer crecer tu negocio.",
   
   copyright: `Copyright © ${year} SB Soluciones Ing.`,
 };

@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
+
 import {
   Card,
   Typography,
@@ -11,26 +13,27 @@ import {
   ChartBarIcon,
   PlayIcon,
 } from "@heroicons/react/24/solid";
-import { Footer } from "@/widgets/layout";
+// ⬇️ usa ruta relativa en vez de "@/widgets/layout"
+import { Footer } from "../widgets/layout";
 
 const contactData = [
   {
-    title: "Excelent Services",
+    title: "Excelente Servicio",
     icon: BriefcaseIcon,
     description:
-      "We provide top-quality technical support and custom software solutions to help your business grow smoothly.",
+      "Te ofrecemos soporte técnico confiable y soluciones de software personalizadas para que tu negocio crezca sin complicaciones.",
   },
   {
-    title: "Grow Your Market",
+    title: "Amplia tu Mercado",
     icon: ChartBarIcon,
     description:
-      "Boost your business with digital solutions that expand your reach and improve efficiency.",
+      "Impulsá tu negocio con soluciones digitales que amplían tu alcance y mejoran la eficiencia.",
   },
   {
-    title: "Launch Time",
+    title: "Momento de lanzamiento",
     icon: PlayIcon,
     description:
-      "We turn your ideas into reality quickly and efficiently, getting your product to market fast.",
+      "Convertimos tus ideas en realidad de forma rápida y eficiente, llevando tu producto al mercado rapidamente.",
   },
 ];
 
@@ -56,13 +59,39 @@ export function Home() {
           <div className="flex flex-wrap items-center">
             <div className="ml-auto mr-auto w-full px-4 text-center lg:w-8/12">
               <Typography variant="h1" color="white" className="mb-6 font-black">
-                Your story starts with us.
+                Tu historia empieza con nosotros.
               </Typography>
               <Typography variant="lead" color="white" className="opacity-80">
-                We develop custom applications, websites, and web systems tailored to simplify your work and boost your business.
-                At SB Soluciones Ingeniería, we are committed to offering reliable solutions and personalized support,
-                always with friendly service and attention to your needs.
+                Desarrollamos aplicaciones, sitios web y sistemas a medida para simplificar tu trabajo y hacer crecer tu negocio.
+  En SB Soluciones Ingeniería ofrecemos soluciones confiables y soporte personalizado, con atención cercana y a tu medida.
               </Typography>
+
+              {/* Botón premium → /offerings */}
+              <div className="mt-8">
+                <Link to="/offerings" className="inline-block">
+                  <button
+                    className="
+                      relative inline-flex items-center justify-center px-8 py-3 rounded-xl
+                      font-semibold text-white
+                      bg-gradient-to-r from-[#0047AB] via-[#0a58cb] to-[#0047AB]
+                      shadow-lg shadow-blue-900/30
+                      transition-all duration-300
+                      hover:scale-[1.02] hover:shadow-blue-900/40
+                      focus:outline-none
+                    "
+                  >
+                    <span className="relative z-10">Ver nuestros diseños</span>
+                    <span
+                      className="pointer-events-none absolute inset-0 rounded-xl"
+                      style={{
+                        background:
+                          "radial-gradient(120px 60px at 10% -10%, rgba(255,255,255,0.35), transparent 60%)",
+                      }}
+                    />
+                  </button>
+                </Link>
+              </div>
+              {/* /Botón premium */}
             </div>
           </div>
         </div>
@@ -73,11 +102,11 @@ export function Home() {
           <div className="mx-auto w-full px-4 text-center lg:w-6/12">
             <Typography variant="lead" className="font-semibold">Co - Working</Typography>
             <Typography variant="h2" color="#ffffff" className="my-3">
-              Build something
+              Crea algo con nosotros
             </Typography>
             <Typography variant="lead" className="text-gray-800">
-              From the first idea to the final product,
-              we're here to turn your vision into reality with smart, tailored solutions that fit your business.
+              Desde la idea inicial hasta el producto final, transformamos tu visión en soluciones inteligentes
+              adaptadas a las necesidades de tu negocio.
             </Typography>
           </div>
 
@@ -107,10 +136,10 @@ export function Home() {
           <div className="mx-auto w-full px-4 text-center lg:w-6/12">
             <Typography variant="lead" className="font-semibold">Contact Us</Typography>
             <Typography variant="h2" color="blue-gray" className="my-3">
-              Want to work with us? <br />Contact the Team Behind the Code
+              Quieres trabajar con nosotros? <br />Contacta al equipo detrás del código.
             </Typography>
             <Typography variant="lead" className="text-gray-800">
-              Complete this form and we will get back to you in 24 hours.
+              Completá este formulario y nos pondremos en contacto con vos dentro de las próximas 24 horas.
             </Typography>
           </div>
 
@@ -145,14 +174,14 @@ export function Home() {
               <Input
                 variant="outlined"
                 size="lg"
-                label="Full Name"
+                label="Nombre completo"
                 name="name"
                 required
               />
               <Input
                 variant="outlined"
                 size="lg"
-                label="Email Address"
+                label="Email "
                 name="email"
                 type="email"
                 required
@@ -162,25 +191,25 @@ export function Home() {
             <Textarea
               variant="outlined"
               size="lg"
-              label="Your Idea"
+              label="Dinos tu idea!"
               rows={8}
               name="message"
               required
             />
 
             <Button
-              className="bg-[#0047AB] text-white mt-8"
+              className="bg-[#0047AB] text-white mt-8 hover:bg-[#003b91] transition-colors duration-300"
               variant="filled"
               size="lg"
               fullWidth
               type="submit"
             >
-              Send Message
+              Enviar Mensaje
             </Button>
 
             {messageSent && (
               <p className="text-green-600 font-medium mt-4 text-center">
-                ✅ Your message has been sent successfully!
+                ✅ ¡Gracias por contactarnos! Tu mensaje se envió con éxito y pronto te responderemos!
               </p>
             )}
           </form>
@@ -192,3 +221,6 @@ export function Home() {
 }
 
 export default Home;
+
+
+
